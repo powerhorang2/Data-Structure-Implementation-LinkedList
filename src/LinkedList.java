@@ -113,4 +113,28 @@ public class LinkedList {
         size--;
         return returnData;
     }
+
+    public Object remove(int k) {
+        if (k == 0) {
+            return removeFirst();
+        }
+        // k-1번째 노드를 temp 의 값으로 지정합니다.
+        Node temp = node(k - 1);
+        // 삭제 노드를 todoDeleted 에 기록해 둡니다.
+        // 삭제 노드를 지금 제거하면 삭제 앞 노드와 삭제 뒤 노드를 연결할 수 없습니다.
+        Node tobeDeleted = temp.next;
+        // 삭제 앞 노드의 다음 노드로 삭제 뒤 노드를 지정합니다.
+        temp.next = temp.next.next;
+        // 삭제된 데이터를 리턴하기 위해서 returnData 에 데이터를 저장합니다.
+        Object returnData = tobeDeleted.data;
+        if (tobeDeleted == tail) {
+            tail = temp;
+        }
+
+        // cur.next 를 삭제합니다.
+        tobeDeleted = null;
+        size--;
+
+        return returnData;
+    }
 }
