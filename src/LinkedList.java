@@ -137,4 +137,8 @@ public class LinkedList {
 
         return returnData;
     }
+
+    public int size() {
+        return size;
+    }
 }
