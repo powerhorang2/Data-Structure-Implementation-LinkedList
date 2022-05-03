@@ -165,4 +165,26 @@ public class LinkedList {
         // 탐색 대상을 찾았다면 대상의 인덱스 값을 리턴합니다.
         return index;
     }
+
+    public ListIterator listIterator() {
+        return new ListIterator();
+    }
+
+    public class ListIterator {
+        private Node lastReturned;
+        private Node next;
+        private int nextIndex;
+
+        ListIterator() {
+            next = head;
+            nextIndex = 0;
+        }
+
+        public Object next() {
+            lastReturned = next;
+            next = next.next;
+            nextIndex++;
+            return lastReturned.data;
+        }
+    }
 }

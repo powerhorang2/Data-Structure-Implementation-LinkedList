@@ -5,18 +5,14 @@ public class Main {
         numbers.addLast(10);
         numbers.addLast(20);
         numbers.addLast(30);
-        numbers.addFirst(5);
-        numbers.add(3, 25);
+        numbers.addLast(40);
         System.out.println("numbers = " + numbers);
-        System.out.println(numbers.remove(1));
-        System.out.println("numbers = " + numbers);
-
-        for (int i = 0; i < numbers.size(); i++) {
-            System.out.println("indexOf : " + numbers.get(i) + " = " + numbers.indexOf(numbers.get(i)));
-        }
-
-        System.out.println(numbers.indexOf("ㅁㄴㅇㅁㄴㅇ"));
-
+        
+        LinkedList.ListIterator li = numbers.listIterator();
+        System.out.println("li.next() = " + li.next());
+        System.out.println("li.next() = " + li.next());
+        System.out.println("li.next() = " + li.next());
+        System.out.println("li.next() = " + li.next());
 
     }
 }
