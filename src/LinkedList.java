@@ -141,4 +141,9 @@ public class LinkedList {
     public int size() {
         return size;
     }
+
+    public Object get(int index) {
+        Node temp = node(index);
+        return temp.data;
+    }
 }

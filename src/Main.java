@@ -8,9 +8,12 @@ public class Main {
         numbers.addFirst(5);
         numbers.add(3, 25);
         System.out.println("numbers = " + numbers);
-        System.out.println("size = " + numbers.size());
         System.out.println(numbers.remove(1));
         System.out.println("numbers = " + numbers);
-        System.out.println("size = " + numbers.size());
+
+        for (int i = 0; i < numbers.size(); i++) {
+            System.out.println("index : " + i + " = " + numbers.get(i));
+        }
+        
     }
 }
