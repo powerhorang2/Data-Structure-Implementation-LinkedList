@@ -8,5 +8,7 @@ public class Main {
         numbers.addFirst(5);
         numbers.add(3, 25);
         System.out.println("numbers = " + numbers);
+        System.out.println(numbers.removeFirst());
+        System.out.println("numbers = " + numbers);
     }
 }

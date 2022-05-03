@@ -102,4 +102,15 @@ public class LinkedList {
         str += temp.data;
         return str + "]";
     }
+
+    public Object removeFirst() {
+        // 첫번째 노드를 temp 로 지정하고 head 의 값을 두번째 노드로 변경합니다.
+        Node temp = head;
+        head = temp.next;
+        // 데이터를 삭제하기 전에 리턴할 값을 임시 변수에 담습니다.
+        Object returnData = temp.data;
+        temp = null;
+        size--;
+        return returnData;
+    }
 }
