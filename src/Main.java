@@ -11,7 +11,7 @@ public class Main {
         LinkedList.ListIterator li = numbers.listIterator();
 
         while (li.hasNext()) {
-            if((int)li.next() == 30) li.add(35);
+            if((int)li.next() == 30) li.remove();
         }
 
         System.out.println("numbers = " + numbers);
