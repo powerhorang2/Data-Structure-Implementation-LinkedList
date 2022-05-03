@@ -12,8 +12,11 @@ public class Main {
         System.out.println("numbers = " + numbers);
 
         for (int i = 0; i < numbers.size(); i++) {
-            System.out.println("index : " + i + " = " + numbers.get(i));
+            System.out.println("indexOf : " + numbers.get(i) + " = " + numbers.indexOf(numbers.get(i)));
         }
-        
+
+        System.out.println(numbers.indexOf("ㅁㄴㅇㅁㄴㅇ"));
+
+
     }
 }
