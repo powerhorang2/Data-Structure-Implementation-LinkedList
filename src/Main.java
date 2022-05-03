@@ -9,10 +9,12 @@ public class Main {
         System.out.println("numbers = " + numbers);
         
         LinkedList.ListIterator li = numbers.listIterator();
-        System.out.println("li.next() = " + li.next());
-        System.out.println("li.next() = " + li.next());
-        System.out.println("li.next() = " + li.next());
-        System.out.println("li.next() = " + li.next());
+
+        while (li.hasNext()) {
+            if((int)li.next() == 30) li.add(35);
+        }
+
+        System.out.println("numbers = " + numbers);
 
     }
 }
